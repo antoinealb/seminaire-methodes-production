@@ -14,9 +14,10 @@
 \usepackage{url}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables for horizontal lines
 \usepackage{siunitx}
+\usepackage{floatrow}
+\usepackage{caption}
+\usepackage{subcaption}
 
-\usepackage{draftwatermark}
-\SetWatermarkScale{4}
 
 % Auteur
 \author{Antoine Albertelli}
@@ -30,7 +31,26 @@
 \input{titlepage.tex}
 \tableofcontents
 
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{two-shots-a}
+                \caption{Remplissage simultané des moules}
+                \label{fig:gull}
+        \end{subfigure}%
+        ~ 
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{two-shots-b}
+                \caption{Rotation des moules}
+                \label{fig:lol}
+        \end{subfigure}%
+        \caption{Procedé two-shot}\label{fig:animals}
+
+        \floatfoot{Source: \url{http://www.sumitomo-shi-demag.eu/processes/multi-component-technology/rotary-plate.html}}
+\end{figure}
+
 \appendix
+\listoffigures
 
 \nocite{*} % tells bibtex to include everything
 \bibliographystyle{abbrv-fr}
