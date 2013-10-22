@@ -1,0 +1,11 @@
+digraph mid_process {
+    rankdir=LR;
+    node [shape=box, label="Moulage par injection\n du substrat"] injection;
+    node [shape=box, label="Activation sélective\n par laser"] activation;
+    node [shape=box, label="Métalisation"] metalisation;
+    node [shape=box, label="Assemblage"] assemblage;
+
+    injection->activation;
+    activation->metalisation;
+    metalisation->assemblage;
+}
