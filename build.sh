@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dot -Tpdf -o lds_process.pdf lds_process.dot
+dot -Tpdf -o images/lds_process.pdf images/lds_process.dot &&
 pdflatex rapport.tex &&
 bibtex rapport.aux &&
 pdflatex rapport.tex && 
