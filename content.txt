@@ -1,0 +1,14 @@
+* Introduction
+ * Définition
+ * Vue d'ensemble des applications.
+* Procédés
+ * LDS
+ * 2-shot
+ * Comparaison
+* Applications
+ * Comparaison avec les PCB
+* Conception
+ * Prototypage
+ * Choix de LDS vs 2 Shot
+* Calcul de couts (séparer les couts fixes et variables)
+* Conclusion (vue d'ensemble)
