@@ -1,0 +1,39 @@
+\section{Étude de coûts}
+
+\subsection{Activation Laser}
+Pour calculer le coût de l'étape d'activation sélective (\textsc{lds}) nous avons utilisés les hypothèses de départ suivantes (basées sur nos observations chez Cicorel) :
+\begin{itemize}
+    \item Le secteur d'activation laser tourne \SI{24}{\hour} par jour, 5 jours sur 7.
+    \item La machine est une Microline 160i de chez LPKF coûtant \SI{220000}{\chf}.
+        Elle est amortie en 5 ans.
+    \item Un opérateur ne peut s'occuper que d'une machine à la fois.
+    \item Le temps de cycle est de \SI{25}{\second\per\piece}.
+        Ce temps change très peu suivant la complexité des connexions électriques car la majorité du temps est prise utilisée pour la mise en place de la pièce et l'alignement visuel par la machine.
+    \item La machine consomme en permanence sa puissance de pointe soit \SI{2.5}{\kilo\watt} \cite{lpkf-microline-series}.
+        L'électricité représentant une fraction faible du coût final, cette hypothèse n'induis pas de grande erreurs.
+\end{itemize}
+
+
+\begin{table} 
+\centering 
+\begin{tabular}{l S[table-format=3.2] r} 
+\toprule 
+Consommation électrique & 2.5 & \si{\kilo\watt} \\
+Prix de l'électricité & 0.25 & \si{\chf\per\kilo\watt\per\hour} \\
+\cmidrule(l){2-3}
+Électricité & 0.625 & \si{\chf\per\hour} \\
+Amortissement machine & 7.05 & \si{\chf\per\hour} \\
+Opérateur & 60 & \si{\chf\per\hour} \\
+\cmidrule(l){2-3}
+Coût horaire & 67.68 & \si{\chf\per\hour} \\
+Temps de cycle & 25 & \si{\second\per\piece} \\
+\cmidrule(l){2-3}
+\textbf{Total} & 0.47 & \si{\chf\per\piece} \\
+
+\bottomrule 
+\end{tabular}
+\caption{Calcul des coûts de l'activation sélective par laser} 
+\end{table}
+
+
+
