@@ -1,7 +1,7 @@
 \section{Étude de coûts}
 
 \subsection{Activation Laser}
-Pour calculer le coût de l'étape d'activation sélective (\textsc{lds}) nous avons utilisés les hypothèses de départ suivantes (basées sur nos observations chez Cicorel) :
+Pour calculer le coût de l'étape d'activation sélective (\textsc{lds}) nous avons utilisés les hypothèses de départ suivantes :
 \begin{itemize}
     \item Le secteur d'activation laser tourne \SI{24}{\hour} par jour, 5 jours sur 7.
     \item La machine est une Microline 160i de chez LPKF coûtant \SI{220000}{\chf}.
@@ -13,8 +13,13 @@ Pour calculer le coût de l'étape d'activation sélective (\textsc{lds}) nous a
         L'électricité représentant une fraction faible du coût final, cette hypothèse n'induis pas de grande erreurs.
 \end{itemize}
 
+Ces hypothèses sont basées sur ce que nous avons eu l'occasion de voir lors de notre visite chez Cicorel.
+Elle s'appliquent à la production d'un couvercle anti-ingénierie inverse pour lecteur de carte.
+Le seul facteur qui change pour une autre pièce est le temps d'illumination laser, qui représente une fraction du temps de cycle.
+Les résultats du tab. \ref{tab:cost-laser-activation} sont donc valables pour la pluspart des pièces.
 
-\begin{table} 
+
+\begin{table}[h!]
 \centering 
 \begin{tabular}{l S[table-format=3.2] r} 
 \toprule 
@@ -33,7 +38,7 @@ Temps de cycle & 25 & \si{\second\per\piece} \\
 \bottomrule 
 \end{tabular}
 \caption{Calcul des coûts de l'activation sélective par laser} 
+\label{tab:cost-laser-activation}
 \end{table}
-
 
 
