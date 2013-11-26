@@ -1,0 +1,40 @@
+% Déclaration du type de document (report, book, paper, etc...)
+\documentclass[a4paper]{paper} 
+ 
+% Package pour avoir Latex en français
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+ 
+% Quelques packages utiles
+\usepackage{listings} % Pour afficher des listings de programmes
+\usepackage{graphicx} % Pour afficher des figures
+\usepackage{amsthm}   % Pour créer des théorèmes et des définitions
+\usepackage{amsmath}
+\usepackage{microtype} % Optical margins FTW
+\usepackage{url}
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables for horizontal lines
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{floatrow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mhchem}
+
+\title{Estimations des coûts}
+\author{Antoine Albertelli \and Quentin Herzig}
+
+% Unités customs pour les francs et les pièces
+\DeclareSIUnit\chf{\textsc{chf}}
+\DeclareSIUnit\piece{pièce}
+\DeclareSIUnit\annee{année}
+\DeclareSIUnit\an{an}
+
+
+
+% Début du document
+\begin{document}
+\maketitle
+\input{cost_molding.tex}
+\input{cost_lds.tex}
+
+\end{document}
