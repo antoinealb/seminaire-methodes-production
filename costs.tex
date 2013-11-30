@@ -1,4 +1,7 @@
 \section{Étude de coûts}
+Pour notre étude de coûts, nous avons décidé de nous baser sur la série en production chez Cicorel lors de notre visite.
+Les tableaux de calculs de coûts restent néanmoins valables, moyennant un changement de certaines valeurs.
+Les paramètres à changer en fonction de la pièce sont indiqués dans le détail de chaque partie.
 
 
 \paragraph{Descriptif de la pièce}
@@ -8,7 +11,7 @@ Le rôle de cette pièce est de détecter toute tentative d'accéder à l'intér
 Pour accomplir cette fonction, deux pistes sont placées en serpentin à l'intérieur du couvercle.
 L'appareil est programmé pour effacer toute les données sensibles dès qu'une de ces pistes est rompue.
 Cette pièce était malheureusement confidentielle et nous n'avons pas pu la prendre en photo.
-Néanmoins une vue simplifiée est visible à la fig. \ref{fig:example-part}.
+Néanmoins une vue schématique en est visible à la fig. \ref{fig:example-part}.
 
 \begin{figure}[h]
     \begin{center}
@@ -19,6 +22,15 @@ Néanmoins une vue simplifiée est visible à la fig. \ref{fig:example-part}.
 \end{figure}
 \subsection{Injection}
 \input{cost_molding.tex}
+L'étape d'injection plastique demande un moule usiné soit par éléctroérosion, soit par usinage à grande vitesse.
+Le coût du moule a été estimé suivant les calculs présentés dans le séminaire\cite{electroerosion-2013}.
+Le détail de ces calculs sortant du cadre du présent séminaire, nous avons fait le choix de ne pas les inclure. 
+
+Nous avons également supposé que la pièce est faite dans la matière la moins cher, c'est à dire le polycarbonate.
+Les polymères activables sont environ 20\% plus cher que leur homlogue non activable d'après notre contact chez Cicorel.
+Les prix des matériaux varient entre \SI{11}{\chf\per\kilogram} pour du \textsc{pc} et \SI{220}{\chf\per\kilogram} pour du \textsc{peek}.
+
+
 
 \subsection{Activation Laser}
 Pour calculer le coût de l'étape d'activation sélective (\textsc{lds}) nous avons utilisés les hypothèses de départ suivantes :
@@ -37,5 +49,6 @@ Ces hypothèses sont basées sur ce que nous avons eu l'occasion de voir lors de
 Elle s'appliquent à la production d'un couvercle anti-ingénierie inverse pour lecteur de carte.
 Le seul facteur qui change pour une autre pièce est le temps d'illumination laser, qui représente une fraction du temps de cycle.
 Les résultats du tab. \ref{tab:cost-laser-activation} sont donc valables pour la pluspart des pièces.
+
 
 \input{cost_lds.tex}
