@@ -1,6 +1,8 @@
 \section{Procédés de fabrication des MID}
 Il existe actuellement 2 méthodes de production de \textsc{mid} sur le marché : le \emph{Laser Direct Structuring} et le \emph{Two-shot molding}.
-Le premier est de loin le plus répandu (environ 80\% du marché selon \cite{mid-2011}), car moins cher et plus adapté aux petites séries, tandis que le second est utilisé lorsque la géométrie de la pièce ne permet pas l'usage du \textsc{lds}.
+Depuis son introduction sur le marché en 2006, le \textsc{lds} a pratiquement éclipsé le Two-shot, car celui ci est plus compliqué à mettre en oeuvre et plus cher.
+Le two-shot était surtout utilisé pour produire des grandes quantités à bas coût mais avec la baisse des prix, le \textsc{lds} est désormais utilisé pour la production de masse.
+Par exemple, Molex, le plus gros constructeur d'antennes \textsc{smd} au monde utilise actuellement uniquement le procédé \textsc{lds}.
 
 \subsection{Laser Direct Structuring}
 \begin{figure}[h]
@@ -54,3 +56,32 @@ En effet une oxydation de la couche de cuivre ruinerait les proprietés électri
 Cette couche est généralement composée d'une couche de nickel suivie d'une couche d'or.
 Le rôle de cette dernière est d'empêcher l'oxydation de la couche de cuivre, tandis que la couche de nickel sert à empêcher le cuivre de diffuser dans l'or, ce qui détruirait la protection anti-oxydation.
 Avant le traitement anti-oxydant, la pièce est passée dans un bain de palladium \footnote{\emph{A vérifier :} \ce{PdCl2}} afin de catalyser la dépose du nickel.
+
+\subsection{Two-shot molding}
+Le two-shot molding est un procédé antérieur au \textsc{lds} et qui n'est pas breveté.
+Il est essentiellement utilisé dans le milieu de l'injection plastique, pour produire des pièces injectées de différentes couleurs, comme des touches de clavier d'ordinateur.
+Cette méthode consiste à d'abord mouler les pistes dans un polymère dopé, puis à ``surmouler'' la forme définitive de la pièce autour (fig. \ref{fig:second-shot}).
+Finalement, la pièce est métalisée suivant le même procédé que dans le \textsc{lds}, mais le cuivre ne se dépose que sur les parties exposées du polymère dopé (fig. \ref{fig:two-shot-metal}).
+
+
+\begin{figure}[h]
+        \centering
+        \begin{subfigure}[t]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{images/two-shot-example/inner}
+                \caption{Injection du polymère dopé.}
+                \label{fig:first-shot}
+        \end{subfigure}%
+        ~ 
+        \begin{subfigure}[t]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{images/two-shot-example/second_shot}
+                \caption{Surmoulage d'un polymère standard.}
+                \label{fig:second-shot}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[t]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{images/two-shot-example/after_metal}
+                \caption{Métallisation.}
+                \label{fig:two-shot-metal}
+        \end{subfigure}
+        \caption{Procédé two-shot}\label{fig:two-shot-process}
+\end{figure}
