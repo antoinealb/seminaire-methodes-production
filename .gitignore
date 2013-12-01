@@ -6,4 +6,7 @@ cost_only.pdf
 *.bbl
 *.blg
 *.log
+*.glo
 *.lof
+*.acn
+*.ist
