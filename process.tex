@@ -1,7 +1,7 @@
 \section{Procédés de fabrication des MID}
 Il existe actuellement 2 méthodes de production de \gls{mid} sur le marché : le \gls{lds} et le \emph{Two-shot molding}.
 Depuis son introduction sur le marché en 2006, le \gls{lds} a pratiquement éclipsé le Two-shot, car celui ci est plus compliqué à mettre en oeuvre et plus cher.
-Le two-shot était surtout utilisé pour produire des grandes quantités à bas coût mais avec la baisse des prix, le \gls{lds} est désormais utilisé pour la production de masse.
+Le two-shot était surtout utilisé pour produire des grandes quantités à bas coût, mais avec la baisse des prix, le \gls{lds} est désormais préféré pour la production de masse.
 Par exemple, Molex, le plus gros constructeur d'antennes \textsc{smd} au monde utilise actuellement uniquement le procédé \gls{lds}.
 
 \subsection{Laser Direct Structuring}
@@ -21,33 +21,34 @@ Le principe général du procédé est visible à la fig.
 On retrouve donc, dans l'ordre :
 
 \begin{description}
-    \item[Injection] La pièce esLa pièce est d'abord moulée par un procédé d'injection standard.
+    \item[Injection] La pièce est d'abord moulée par un procédé d'injection standard.
         Le détail de cette étape sort du cadre de ce séminaire.
         On se référera à celui sur l'injection plastique.
 
     \item[Activation] Le polymère ayant servi pour l'injection de la pièce a préalablement été dopé avec un composant organométallique qui est activé par le laser en suivant le tracé des pistes voulues.
         Une réaction physique décompose alors ce dopant entre partie métallique et partie organique.
-    Les lasers utilisés sont typiquement des lasers infra-rouges d'une \item[Métallisation] L'étape de métallisation commence par une étape de nettoyage, afin de faciliter l'accrochage.
+        Les lasers utilisés sont typiquement des lasers infra-rouges d'une longueur lambda \SI{1000}{\nano\meter}.
+    \item[Métallisation] L'étape de métallisation commence par une étape de nettoyage, afin de faciliter l'accrochage.
         Les pistes sont ensuites construites par dépose de fine couches (environ \SI{5}{\micro\meter}).
         Finalement, un traitement de surface contre l'oxydation est appliqué.
         Ce traitement consiste généralement en une couche de nickel suivi d'une couche d'or, mais des traitements spécifiques, à base d'étain ou d'argent sont également possibles.
     \item[Assemblage] Les composants électriques annexes (boutons, connecteurs, etc\ldots) sont soudés sur le \gls{mid}.
         Pendant le prototypage cette étape est souvent faite à la main, avec un fer à souder.
-        Pour la production, si le polymère a une température de fusion suffisament élevée, l'assemblage par \emph{reflow soldering} est possible.
+        Pour la production, si le polymère a une température de fusion suffisament élevée, l'assemblage par \emph{reflow soldering}\footnote{Se référer au séminaire \cite{smd-assembly-2013}.} est possible.
 
 \end{description}
 
 \subsubsection{Métallisation}
 L'étape de métallisation est celle qui va déposer les pistes sur le poylmére à proprement parler.
-Afin de garantir le bon fonctionnement de cette étape, un rinçage de la pièce entre chaque bains est effectué, ainsi qu'un séchage à chaud après le dernier bain, afin d'enlever toute trace sur la pièce finale.
+Afin de garantir le bon fonctionnement de cette étape, un rinçage de la pièce entre chaque bain est effectué, ainsi qu'un séchage à chaud après le dernier bain, afin d'enlever toute trace sur la pièce finale.
 
 Le premier bain de cuivre se fait sans électrolyse, vu qu'aucune piste conductrice n'existe pour le moment.
-Dans ce bain, du cuivre va croître autour des atomes de métail présent à la surface du polymère et se liera au microcavités résultant de l'activation laser.
+Dans ce bain, du cuivre va croître autour des atomes de métal présent à la surface du polymère et se liera au microcavités résultant de l'activation laser.
 L'épaisseur maximum atteignable lors de ce premier bain est de 5 à 8 \si{\micro\meter}.
 
 Dans les applications à fort courants, une grande épaisseur de cuivre est souhaitée.
-Pour y parvernir, on peut, après le premier bain, faire une dépose éléctrolytique du cuivre.
-Pour cela, il faut que toute les pistes soit connectées entre elles en un point.
+Pour y parvenir, on peut, après le premier bain, faire une déposition éléctrolytique du cuivre.
+Pour cela, il faut que toute les pistes soient connectées entre elles en un point.
 Si ce n'était pas le cas, il faudrait connecter les pistes une à une à l'éléctrode, ce qui serait long et donc coûteux.
 Le point de connexion est généralement placé sur une partie séparable mécaniquement qui est enlevée après la métallisation.
 
@@ -55,7 +56,6 @@ Une fois ce premier bain terminé, une couche de protection contre l'oxydation e
 En effet une oxydation de la couche de cuivre ruinerait les proprietés électriques du circuit.
 Cette couche est généralement composée d'une couche de nickel suivie d'une couche d'or.
 Le rôle de cette dernière est d'empêcher l'oxydation de la couche de cuivre, tandis que la couche de nickel sert à empêcher le cuivre de diffuser dans l'or, ce qui détruirait la protection anti-oxydation.
-Avant le traitement anti-oxydant, la pièce est passée dans un bain de palladium \footnote{\emph{A vérifier :} \ce{PdCl2}} afin de catalyser la dépose du nickel.
 
 \subsection{Two-shot molding}
 Le two-shot molding est un procédé antérieur au \gls{lds} et qui n'est pas breveté.

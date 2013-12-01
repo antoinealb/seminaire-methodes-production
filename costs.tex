@@ -11,13 +11,13 @@ Le rôle de cette pièce est de détecter toute tentative d'accéder à l'intér
 Pour accomplir cette fonction, deux pistes sont placées en serpentin à l'intérieur du couvercle.
 L'appareil est programmé pour effacer toute les données sensibles dès qu'une de ces pistes est rompue.
 Cette pièce était malheureusement confidentielle et nous n'avons pas pu la prendre en photo.
-Néanmoins une vue schématique en est visible à la fig. \ref{fig:example-part}.
+On peut l'approximer par la boîte creuse visible à la fig. \ref{fig:example-part}.
 
 \begin{figure}[h]
     \begin{center}
 %        \missingfigure[figwidth=\textwidth]{Image de la pièce d'exemple.}
         \includegraphics[width=\textwidth]{images/example_part/example_mid}
-        \caption{Pièce d'exemple}\label{fig:example-part}
+        \caption{Pièce d'exemple. Les dimensions et la géométrie sont approximatives.}\label{fig:example-part}
     \end{center}
 \end{figure}
 \subsection{Injection}
@@ -27,28 +27,27 @@ Le coût du moule a été estimé suivant les calculs présentés dans le sémin
 Le détail de ces calculs sortant du cadre du présent séminaire, nous avons fait le choix de ne pas les inclure. 
 
 Nous avons également supposé que la pièce est faite dans la matière la moins cher, c'est à dire le polycarbonate.
-Les polymères activables sont environ 20\% plus cher que leur homlogue non activable d'après notre contact chez Cicorel.
+Les polymères activables sont environ 20\% plus cher que leur homologue non activable d'après notre contact chez Cicorel.
 Les prix des matériaux varient entre \SI{11}{\chf\per\kilogram} pour du \textsc{pc} et \SI{220}{\chf\per\kilogram} pour du \textsc{peek}.
 
-
-
 \subsection{Activation Laser}
-Pour calculer le coût de l'étape d'activation sélective (\gls{lds}) nous avons utilisés les hypothèses de départ suivantes :
+Pour calculer le coût de l'étape d'activation sélective (\gls{lds}) nous avons fait quelques hypothèses :
 \begin{itemize}
     \item Le secteur d'activation laser tourne \SI{24}{\hour} par jour, 5 jours sur 7.
     \item La machine est une Microline 160i de chez LPKF coûtant \SI{220000}{\chf}.
         Elle est amortie en 5 ans.
     \item Un opérateur ne peut s'occuper que d'une machine à la fois.
     \item Le temps de cycle est de \SI{25}{\second\per\piece}.
-        Ce temps change très peu suivant la complexité des connexions électriques car la majorité du temps est prise utilisée pour la mise en place de la pièce et l'alignement visuel par la machine.
+        Ce temps change très peu suivant la complexité des connexions électriques car la majorité du temps est prise par la mise en place de la pièce et l'alignement visuel par la machine.
     \item La machine consomme en permanence sa puissance de pointe soit \SI{2.5}{\kilo\watt} \cite{lpkf-microline-series}.
         L'électricité représentant une fraction faible du coût final, cette hypothèse n'induis pas de grande erreurs.
 \end{itemize}
 
 Ces hypothèses sont basées sur ce que nous avons eu l'occasion de voir lors de notre visite chez Cicorel.
 Elle s'appliquent à la production d'un couvercle anti-ingénierie inverse pour lecteur de carte.
-Le seul facteur qui change pour une autre pièce est le temps d'illumination laser, qui représente une fraction du temps de cycle.
-Les résultats du tab. \ref{tab:cost-laser-activation} sont donc valables pour la pluspart des pièces.
+Le seul facteur qui varie pour une autre pièce est le temps d'illumination laser, qui représente une fraction faible du temps de cycle.
+Les résultats du tab. \ref{tab:cost-laser-activation} ne dépendent pas de la pièce en première approximation.
+Pour un résultat plus précis il faut prendre en compte la vitesse de balayage du laser, disponible dans les datasheets de la machine.
 
 
 \input{cost_lds.tex}
