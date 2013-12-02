@@ -1,0 +1,3 @@
+[submodule "oral/reveal"]
+	path = oral/reveal
+	url = https://github.com/hakimel/reveal.js.git
