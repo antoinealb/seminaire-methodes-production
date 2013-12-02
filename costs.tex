@@ -51,3 +51,35 @@ Pour un résultat plus précis il faut prendre en compte la vitesse de balayage 
 
 
 \input{cost_lds.tex}
+
+\subsection{Métallisation}
+Calculer le coût réel de cette étape est difficile, car beaucoup d'informations ne sont pas disponibles publiquement : le prix des bains et de la \gls{step} pour ne citer que ces deux là, ne sont pas trouvable chez les fournisseurs.
+De plus filtrer les bains pour les recycler permet de récupérer un peu de matière qui est revendue, ce qui intervient dans le calcul de coût, mais est difficile à estimer.
+Finalement, notre contact chez Cicorel a refusé de détailler leur méthode de calculs pour ces bains, en nous répondant qu'il s'agissait de données internes et confidentielles.
+Nous avons par contre pu obtenir le coût de l'étape de métallisation pour les pièces en cours de production : \SI{0.70}{\chf\per\piece}.
+
+Le changement des bains se faisant à fréquence fixe, et la durée de séjour des pièces dans chaque bain ne dépendant pas du type de pièce, le coût de l'étape de métallisation de dépend donc que du nombre de pièce
+pouvant entrer simultanément dans la cuve.
+Chaque rack à couvercle pouvait contenir 80 pièces, et chaque support contenait 5 racks.
+Nous pouvons donc supposer que métalliser un support complet coûte \SI{280}{\chf}.
+
+Au final, nous arrivons à une formule empirique pour l'étape de métallisation (avec $c$ le coût par pièce et $n$ le nombre de pièce sur un rack) :
+
+\begin{equation*}
+    c = \frac{\SI{280}{\chf}}{n}
+\end{equation*}
+
+
+\subsection{Récapitulatif}
+Le calcul des coût appliqué au couvercle d'exemple (fig. \ref{fig:example-part}) donne le résultat visible dans le tab. \ref{tab:cost-final}.
+\input{cost_final.tex}
+
+\begin{figure}[h]
+
+    \begin{tikzpicture}
+        \pie[sum=auto,text=legend, after number=\si{\chf}]{1.33/Injection, 0.47/Activation, 0.70/Métallisation}
+    \end{tikzpicture}
+    \begin{center}
+        \caption{Pièce d'exemple. Les dimensions et la géométrie sont approximatives.}\label{fig:example-part}
+    \end{center}
+\end{figure}
