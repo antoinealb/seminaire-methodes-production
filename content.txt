@@ -5,9 +5,8 @@
  * LDS
  * 2-shot
  * Comparaison
-* Applications
- * Comparaison avec les PCB
 * Conception
+ * Comparaison avec les PCB
  * Prototypage
  * Choix de LDS vs 2 Shot
 * Calcul de couts (séparer les couts fixes et variables)
