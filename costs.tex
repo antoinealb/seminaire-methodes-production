@@ -37,18 +37,13 @@ Pour calculer le coût de l'étape d'activation sélective (\gls{lds}) nous avon
     \item La machine est une Microline 160i de chez LPKF coûtant \SI{220000}{\chf}.
         Elle est amortie en 5 ans.
     \item Un opérateur ne peut s'occuper que d'une machine à la fois.
-    \item Le temps de cycle est de \SI{25}{\second\per\piece}.
-        Ce temps change très peu suivant la complexité des connexions électriques car la majorité du temps est prise par la mise en place de la pièce et l'alignement visuel par la machine.
     \item La machine consomme en permanence sa puissance de pointe soit \SI{2.5}{\kilo\watt} \cite{lpkf-microline-series}.
         L'électricité représentant une fraction faible du coût final, cette hypothèse n'induis pas de grande erreurs.
 \end{itemize}
 
-Ces hypothèses sont basées sur ce que nous avons eu l'occasion de voir lors de notre visite chez Cicorel.
-Elle s'appliquent à la production d'un couvercle anti-ingénierie inverse pour lecteur de carte.
-Le seul facteur qui varie pour une autre pièce est le temps d'illumination laser, qui représente une fraction faible du temps de cycle.
-Les résultats du tab. \ref{tab:cost-laser-activation} ne dépendent pas de la pièce en première approximation.
-Pour un résultat plus précis il faut prendre en compte la vitesse de balayage du laser, disponible dans les datasheets de la machine.
-
+Le calcul de la surface occuppée par les pistes sur notre circuit se base sur une largeur de piste de \SI{150}{\micro\meter} et une
+distance entre deux pistes de \SI{150}{\micro\meter} également, pour une piste occupant toute la surface du circuit.
+Pour une autre pièce, la surface des pistes peut souvent être obtenue dans le logiciel de conception.
 
 \input{cost_lds.tex}
 
@@ -77,7 +72,7 @@ Le calcul des coût appliqué au couvercle d'exemple (fig. \ref{fig:example-part
 \begin{figure}[h]
 
     \begin{tikzpicture}
-        \pie[sum=auto,text=legend, after number=\si{\chf}]{1.33/Injection, 0.47/Activation, 0.70/Métallisation}
+        \pie[sum=auto,text=legend, after number=\si{\chf}]{0.38/Injection, 0.48/Activation, 0.68/Métallisation}
     \end{tikzpicture}
     \begin{center}
         \caption{Pièce d'exemple. Les dimensions et la géométrie sont approximatives.}\label{fig:example-part}
