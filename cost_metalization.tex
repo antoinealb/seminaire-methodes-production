@@ -1,0 +1,38 @@
+\begin{table}[h!]
+\centering 
+\begin{tabular}{l S[table-format=3.2] r} 
+\toprule 
+\multicolumn{2}{l}{\textbf{Machines}} & \\ 
+Chaîne de bain& 1000000 & \si{\chf} \\
+Fonctionnement & 6240 & \si{\hour\per\annee} \\
+\cmidrule(l){2-3}
+Amortissement sur 5 ans & 32& \si{\chf\per\hour} \\
+\midrule
+\multicolumn{2}{l}{\textbf{Opérateurs}} & \\ 
+Opérateur à 66\% & 40& \si{\chf\per\hour} \\
+\midrule
+
+\multicolumn{2}{l}{\textbf{Matière}} & \\ 
+Cuivre chimique & 100 & \si{\chf\per\kilogram} \\ 
+Nickel chimique & 100 & \si{\chf\per\kilogram} \\ 
+Or chimique & 175000 & \si{\chf\per\kilogram} \\ 
+Couche de cuivre (\SI{6}{\micro\meter}) & 5.34 & \si{\chf\per\meter\squared} \\
+Couche de nickel (\SI{6}{\micro\meter}) & 5.34 & \si{\chf\per\meter\squared} \\
+Couche d'or (\SI{0.05}{\micro\meter}) & 168.875 & \si{\chf\per\meter\squared} \\
+Surface de piste & \num{1.8e-3} & \si{\meter\squared\per\piece} \\ 
+\cmidrule(l){2-3}
+Coût de la matière & 0.27 & \si{\chf\per\piece} \\
+
+\midrule
+\midrule
+Coût horaire & 72 & \si{\chf\per\hour} \\
+Temps de cycle & 2 & \si{\hour} \\
+Pièces par bain & 400 & \\
+\cmidrule(l){2-3}
+\textbf{\textsc{Total}} & 0.68& \si{\chf\per\piece} \\
+
+\bottomrule 
+\end{tabular}
+\caption{Calcul des coûts de la métallisation.} 
+\label{tab:cost-molding}
+\end{table}
