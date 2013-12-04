@@ -13,7 +13,7 @@ L'appareil est programmé pour effacer toute les données sensibles dès qu'une 
 Cette pièce était malheureusement confidentielle et nous n'avons pas pu la prendre en photo.
 On peut l'approximer par la boîte creuse visible à la fig. \ref{fig:example-part}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \begin{center}
 %        \missingfigure[figwidth=\textwidth]{Image de la pièce d'exemple.}
         \includegraphics[width=\textwidth]{images/example_part/example_mid}
@@ -48,34 +48,53 @@ Pour une autre pièce, la surface des pistes peut souvent être obtenue dans le 
 \input{cost_lds.tex}
 
 \subsection{Métallisation}
-\input{cost_metalization.tex}
 Calculer le coût réel de cette étape est difficile, car beaucoup d'informations ne sont pas disponibles publiquement : le prix des bains et de la \gls{step} pour ne citer que ces deux là, ne sont pas trouvable chez les fournisseurs.
 De plus filtrer les bains pour les recycler permet de récupérer un peu de matière qui est revendue, ce qui intervient dans le calcul de coût, mais est difficile à estimer.
 Finalement, notre contact chez Cicorel a refusé de détailler leur méthode de calculs pour ces bains, en nous répondant qu'il s'agissait de données internes et confidentielles.
-Nous avons par contre pu obtenir le coût de l'étape de métallisation pour les pièces en cours de production : \SI{0.70}{\chf\per\piece}.
 
-Le changement des bains se faisant à fréquence fixe, et la durée de séjour des pièces dans chaque bain ne dépendant pas du type de pièce, le coût de l'étape de métallisation de dépend donc que du nombre de pièce
-pouvant entrer simultanément dans la cuve.
-Chaque rack à couvercle pouvait contenir 80 pièces, et chaque support contenait 5 racks.
-Nous pouvons donc supposer que métalliser un support complet coûte \SI{280}{\chf}.
+Nous avons donc estimé que le coût pour déposer \SI{1}{\kilogram} de métal par voie chimique était environ cinq fois le prix de ce métal sur le marché.
+Ce coût inclut la \gls{step}, le chauffage des bains et l'électricité consommée par le robot servant à déplacer les pièces d'un bain au suivant. 
+Cette estimation peut sembler hasardeuse, mais elle donne néanmoins une approximation suffisante pour l'ingénieur désireux d'utiliser ce procédé.
+À ce coût des matériaux il faut ajouter l'amortissement de la machine sur cinq ans et l'opérateur (deux opérateur pour trois lignes).
 
-Au final, nous arrivons à une formule empirique pour l'étape de métallisation :
-
-\begin{equation*}
-    \text{Coût par pièce} = \frac{\SI{280}{\chf}}{\text{Nombre de pièces par bain}}
-\end{equation*}
-
+\input{cost_metalization.tex}
 
 \subsection{Récapitulatif}
 Le calcul des coût appliqué au couvercle d'exemple (fig. \ref{fig:example-part}) donne le résultat visible dans le tab. \ref{tab:cost-final}.
 \input{cost_final.tex}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 
     \begin{tikzpicture}
-        \pie[sum=auto,text=legend, after number=\si{\chf}]{0.38/Injection, 0.48/Activation, 0.68/Métallisation}
+        \pie[sum=auto,text=pin, explode=0.1, after number=\si{\chf}, color=lightgray]{0.38/Injection, 0.55/LDS, 0.90/Métallisation}
     \end{tikzpicture}
     \begin{center}
         \caption{Pièce d'exemple. Les dimensions et la géométrie sont approximatives.}\label{fig:example-part}
     \end{center}
 \end{figure}
+
+\subsection{Comparaison avec un PCB}
+Pour bien illustrer les avantages des \glspl{mid} dans ce type d'applications, nous avons imaginé une autre solution pour cette fonction, qui utilise un \gls{pcb} fixé dans une coque en \gls{pc} moulée par injection.
+Les principales différence à prendre en compte sont :
+\begin{itemize}
+    \item Le prix de la matière de la coque, \SI{3}{\chf\per\kilogram} pour du \gls{pc} standard, contre \SI{11}{\chf\per\kilogram} pour sa variante activable.
+    \item Le coût de fabrication du \gls{pcb} équivalent.
+        Dans cet exemple nous considérons un \gls{pcb} qui ne couvre que le fond du boîtier, contrairement à une solution \gls{mid} qui couvre également les parois latérales.
+    \item On considère que le \gls{pcb} est fixé mécaniquement au boîtier et que cette étape est faite à la main.
+    \item Un connecteur doit être soudé sur le \gls{pcb} tandis qu'en \gls{mid} le connecteur est intégré directement dans la pièce.
+\end{itemize}
+
+Pour calculer le coût du \gls{pcb} nous avons utilisé le séminaire\cite{pcb-2013}, avec les paramètres suivants :
+\begin{itemize}
+    \item Dimensions de la carte : 60x60 \si{\milli\meter}.
+    \item Circuit monocouche.
+    \item Pas de via, pas de trous.
+    \item Pas de sérigraphie.
+\end{itemize}
+
+Nous arrivons donc à un coût de \SI{3.13}{\chf\per\piece}.
+A ce coût s'ajoutent le connecteur et son assemblage (\SI{0.5}{\chf\per\piece}), le boîtier injecté (\SI{0.2}{\chf\per\piece}) et l'assemblage du \gls{pcb} dans ce dernier par l'opérateur
+(\SI{10}{\second} à \SI{1}{\chf\per\minute} soit \SI{0.15}{\chf\per\piece}).
+On arrive à un total d'environ \SI{4}{\chf\per\piece} soit deux fois plus que l'alternative \gls{mid}, tout en offrant une moins bonne protection contre l'intrusion sur les côtés.
+
+
