@@ -1,4 +1,20 @@
 \section{Étude de coûts}
+
+\begin{figure}[h]
+        \centering
+        \begin{subfigure}[t]{0.4\textwidth}
+            \includegraphics[width=\textwidth]{images/example_part/example_mid}
+            \caption{Partie mécanique. Dimensions en \si{\milli\meter}}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[t]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/example_part/tracks.png}
+                \caption{Tracé des pistes (identique pour les cinq faces intérieures).}
+        \end{subfigure}
+
+        \caption{Pièce d'exemple. Les dimensions et la géométrie sont approximatives. La largeur des pistes et la distance entre deux pistes est de \SI{150}{\micro\meter}.}
+        \label{fig:example-part}
+\end{figure}
 Pour notre étude de coûts, nous avons décidé de nous baser sur la série en production chez Cicorel lors de notre visite.
 Les tableaux de calculs de coûts restent néanmoins valables, moyennant un changement de certaines valeurs.
 Les paramètres à changer en fonction de la pièce sont indiqués dans le détail de chaque partie.
@@ -13,13 +29,7 @@ L'appareil est programmé pour effacer toute les données sensibles dès qu'une 
 Cette pièce était malheureusement confidentielle et nous n'avons pas pu la prendre en photo.
 On peut l'approximer par la boîte creuse visible à la fig. \ref{fig:example-part}.
 
-\begin{figure}[h!]
-    \begin{center}
-%        \missingfigure[figwidth=\textwidth]{Image de la pièce d'exemple.}
-        \includegraphics[width=\textwidth]{images/example_part/example_mid}
-        \caption{Pièce d'exemple. Les dimensions et la géométrie sont approximatives.}\label{fig:example-part}
-    \end{center}
-\end{figure}
+
 \subsection{Injection}
 \input{cost_molding.tex}
 L'étape d'injection plastique demande un moule usiné soit par éléctroérosion, soit par usinage à grande vitesse.
@@ -69,7 +79,7 @@ Le calcul des coût appliqué au couvercle d'exemple (fig. \ref{fig:example-part
         \pie[sum=auto,text=pin, explode=0.1, after number=\si{\chf}, color=lightgray]{0.38/Injection, 0.55/LDS, 0.90/Métallisation}
     \end{tikzpicture}
     \begin{center}
-        \caption{Pièce d'exemple. Les dimensions et la géométrie sont approximatives.}\label{fig:example-part}
+        \caption{Répartition des coûts selon les étapes pour la pièce d'exemple.}\label{fig:cost-repartition}
     \end{center}
 \end{figure}
 
