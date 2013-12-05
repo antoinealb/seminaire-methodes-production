@@ -1,6 +1,6 @@
 *.swp
 *.toc
-rapport.pdf
+#rapport.pdf
 cost_only.pdf
 *.aux
 *.bbl
