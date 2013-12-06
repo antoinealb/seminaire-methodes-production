@@ -54,17 +54,24 @@ De plus, les \glspl{mid} ne permettent pas de faire des pistes très fines ou tr
 
 
 \subsection{Prototypage}
+Le travail d'ingénieur étant un procédé itératif, il est important de pouvoir réaliser rapidement et à faible coût des prototypes fonctionnels d'une pièce ou d'un système.
+Le \gls{mid}, et plus particuliérement l'étape d'injection plastique, n'est pas bien adapté au prototypage : lancer une série coûte cher et n'est pas un procédé rapide (jusqu'à six semaines).
+
+%%%% TODO a changer
 Le \gls{lds} offre différentes possibilités de prototypage simples, puisque la seule étape différente de la production est la création de la pièce de base en polymère.
 Les étapes d'activation et de métallisation sont donc inchangées par rapport à la production.
 Le prototypage sert autant à mettre au point le \gls{mid} que le procédé de production, par exemple les supports pour la métallisation ou l'activation.
+
+%%%%%%%%%%%
 
 La première méthode (et la plus simple) pour prototyper une pièce en \gls{mid} consiste à usiner sa forme dans un bloc de polymère déjà dopé.
 On utilise donc des machines d'usinage conventionelles ou \textsc{cnc}, qui sont facilement disponibles, avant d'activer et de métalliser la pièce.
 Cette méthode a comme avantage de ne demander aucun équipement spécifique et d'être facilement réalisable par un opérateur sans formation sur une machine spéciale.
 Son principal inconvénient est que certaines pièces qui peuvent être injectées ne peuvent pas être usinées et inversement, ce qui rend cette technique inutile pour certaines pièces.
 
-Une seconde méthode de prototypage consiste à réaliser en stéréolithographie ou en impression 3D la forme de la pièce puis à la peindre avec une laque spéciale vendue par LPKF, qui rend la surface activable après un bref passage au four, ce qui demande un polymère stable à \SI{90}{\degree}.
+Une seconde méthode de prototypage consiste à réaliser en stéréolithographie ou en impression 3D la forme de la pièce puis à la peindre avec une laque spéciale vendue par LPKF, qui rend la surface activable après un bref passage au four, ce qui demande un polymère stable à \SI{90}{\celsius}.
 On utilisera donc de préférence de l'\textsc{abs}.
+Cette méthode, comme la précédente, permet un temps entre l'envoi d'une commande et la réception d'un prototype de l'ordre d'une semaine.
 
 Toujours en utilisant la stéréolithographie ou l'impression 3D, il est possible de réaliser la forme de la pièce en positif, puis de couler un moule en silicone autour, pour l'utilisation dans une machine d'injection sous vide.
 On injecte ensuite la pièce en \textsc{pur} dopé, qu'on peut ensuite activer et métalliser de façon standard.
@@ -72,5 +79,5 @@ Cette méthode a comme principal inconvénient de demander une machine spécifiq
 Elle n'est donc que rarement utilisée.
 
 La dernière méthode de prototypage est résérvée aux derniers tests avant la production en grande série, car c'est la plus onéreuse.
-Dans cette méthode tout le procédé est rigoureusement identique au procédé final, la seule différence étant le type de moule : on utilise ici un \textit{soft mold} en aluminium, plutôt qu'un moule en acier trempé.
-On arrive donc à un moule se comportant comme le vrai, ce qui est important pour tester tout les paramètres d'injection (température, vitesse d'injection, etc.), à un prix bien moindre : un \textit{soft mold} coûte environ 10\% du prix de son homologue en acier, mais ne permet que de produire 1000 pièces environ.
+Dans cette méthode, tout le procédé est rigoureusement identique au procédé final, la seule différence étant le type de moule : on utilise ici un \textit{soft mold} en aluminium, plutôt qu'un moule en acier trempé.
+On arrive donc à un moule se comportant comme le vrai, ce qui est important pour tester tous les paramètres d'injection (température, vitesse d'injection, etc.), à un prix bien moindre : un \textit{soft mold} coûte environ 10\% du prix de son homologue en acier, mais ne permet de produire que 1000 pièces environ.
