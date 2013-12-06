@@ -48,21 +48,25 @@ Nous allons ici nous concentrer sur les plus importantes.
 
 La plus grosse limitation des \glspl{mid} par rapport aux \glspl{pcb} est la faible densité de pistes atteignable.
 En effet, il est impossible de fabriquer des \glspl{mid} avec des couches internes, là où des circuits à 16 couches sont facilement atteignables dans le domaine des \glspl{pcb}.
-De plus, les \glspl{mid} ne permettent pas de faire des pistes très fines ou très serrées : On considére généralement qu'il faut rester au dessus de \SI{150}{\micro\meter} pour la largeur de piste et l'écart inter-piste.
+De plus, les \glspl{mid} ne permettent pas de faire des pistes très fines ou très serrées : On considére généralement qu'il faut rester au dessus de \SI{150}{\micro\meter} pour la largeur de piste et \SI{200}{\micro\meter} pour l'écart inter-piste.
 
-\textbf{A compléter\ldots}
+De plus l'angle d'incidence du laser doit rester inférieur à \SI{30}{\degree} par rapport à la normale de la surface.
+Un angle plus important change la forme du spot du laser, qui passe d'un cercle à une ellipse, ce qui dissipe plus la puissance du laser et diminue la résolution.
+On peut néanmoins corriger ce problème en montant la pièce sur un support orientable, moyennant une perte de temps pour la rotation de la pièce et le réalignement optique de la machine.
+Dans les cas les plus extrêmes, on ne peut pas corriger ce problème de cette façon, et alors le passage au two-shot est inévitable.
+On préfère cependant souvent modifier la pièce pour rester sur une technologie \gls{lds} pour minimiser les coûts et faciliter le développement.
 
+%TODO Insérer figure montrant une orientation problèmatique
+
+La dernière limitation concerne le volume de travail de la machine d'activation laser : environ $\SI{200}{\milli\meter}\times\SI{200}{\milli\meter}\times\SI{25}{\milli\meter}$, légérement variable d'une machine à l'autre.
 
 \subsection{Prototypage}
 Le travail d'ingénieur étant un procédé itératif, il est important de pouvoir réaliser rapidement et à faible coût des prototypes fonctionnels d'une pièce ou d'un système.
 Le \gls{mid}, et plus particuliérement l'étape d'injection plastique, n'est pas bien adapté au prototypage : lancer une série coûte cher et n'est pas un procédé rapide (jusqu'à six semaines).
 
-%%%% TODO a changer
 Le \gls{lds} offre différentes possibilités de prototypage simples, puisque la seule étape différente de la production est la création de la pièce de base en polymère.
 Les étapes d'activation et de métallisation sont donc inchangées par rapport à la production.
 Le prototypage sert autant à mettre au point le \gls{mid} que le procédé de production, par exemple les supports pour la métallisation ou l'activation.
-
-%%%%%%%%%%%
 
 La première méthode (et la plus simple) pour prototyper une pièce en \gls{mid} consiste à usiner sa forme dans un bloc de polymère déjà dopé.
 On utilise donc des machines d'usinage conventionelles ou \textsc{cnc}, qui sont facilement disponibles, avant d'activer et de métalliser la pièce.
