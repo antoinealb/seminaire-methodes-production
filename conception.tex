@@ -84,3 +84,24 @@ Elle n'est donc que rarement utilisée.
 La dernière méthode de prototypage est résérvée aux derniers tests avant la production en grande série, car c'est la plus onéreuse.
 Dans cette méthode, tout le procédé est rigoureusement identique au procédé final, la seule différence étant le type de moule : on utilise ici un \textit{soft mold} en aluminium, plutôt qu'un moule en acier trempé.
 On arrive donc à un moule se comportant comme le vrai, ce qui est important pour tester tous les paramètres d'injection (température, vitesse d'injection, etc.), à un prix bien moindre : un \textit{soft mold} coûte environ 10\% du prix de son homologue en acier, mais ne permet de produire que 1000 pièces environ.
+\subsection{Comparatif entre PCB et MID}
+Il est important de noter que les \glspl{mid} ne sont pas un remplaçant ou un successeur aux \glspl{pcb} : ils répondent à des besoins différents.
+Par exemple, réaliser un circuit complexe mais sans intégration mécanique, comme une carte mère d'ordinateur, en \gls{mid} n'est pas une bonne idée : la densité de pistes et d'éléments est beaucoup plus grande avec un \gls{pcb}, tandis que les seules fonctions mécaniques demandées sont des perçages de fixations au boîtier.
+En revanche, dans le cas d'un ordinateur portable, la réalisation d'une antenne \gls{mid} (WiFi, Bluetooth, etc.) est intéressante, étant donné son intégration facilitée au châssis.
+On voit dans cet exemple que la combinaison d'un \gls{mid} et d'un \gls{pcb} permet de tirer le meilleur des deux technologies.
+
+En résumé, les principaux avantages des \glspl{mid} sont :
+\begin{itemize}
+    \item les \glspl{mid} permettent une géométrie en trois dimensions tandis que les \glspl{pcb} sont limités à un plan,
+    \item ils permettent d'associer des fonctions mécaniques et électriques dans une seule pièce,
+    \item la complexité (et donc le temps d'assemblage) est réduit par les \glspl{mid}, grâce à la diminution du câblage.
+\end{itemize}
+
+~
+
+A l'inverse, leurs principaux inconvénients sont :
+\begin{itemize}
+    \item les circuits en \gls{mid} ne permettent pas une grande densité de pistes, car il n'est pas possible de faire des couches internes et que la résolution du procédé est limitée,
+    \item l'assemblage des composants est plus difficile, car pas limité à un seul plan,
+    \item faire des petites séries de \gls{mid} est possible, mais très cher, tandis que les \glspl{pcb} sont plus abordables car ils ne demandent pas de moules.
+\end{itemize}
