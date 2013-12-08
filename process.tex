@@ -11,8 +11,8 @@ Par exemple, Molex, le plus gros constructeur d'antennes \textsc{smd} au monde u
         \caption{Vue d'ensemble du processus \emph{Laser Direct Structuring}}\label{fig:lds-process}
     \end{center}
 \end{figure}
-Le \gls{lds} est un procédé relativement récent, ayant été introduit sur le marché en 2006.
-Par conséquent, c'est une technologie brevetée de LPKF~Lasers~\&~Electronics~AG en Allemagne.
+Le \gls{lds} est un procédé relativement récent, introduit sur le marché en 2006.
+C'est une technologie brevetée de LPKF~Lasers~\&~Electronics~AG en Allemagne.
 Leur site web\footnote{\url{www.lpkf.com}} est donc une excellente source d'informations pour la conception de pièces utilisant le \gls{lds}.
 
 \subsubsection{Principe de base du procédé}
@@ -32,8 +32,8 @@ On retrouve donc, dans l'ordre :
         Les pistes sont ensuites construites par déposition de fine couches (environ \SI{5}{\micro\meter}).
         Finalement, un traitement de surface contre l'oxydation est appliqué.
         Ce traitement consiste généralement en une couche de nickel suivie d'une fine couche d'or, mais des traitements spécifiques, à base d'étain ou d'argent sont également possibles.
-    \item[Assemblage] Les composants électriques annexes (boutons, connecteurs, etc\ldots) sont soudés sur le \gls{mid}.
-        Pendant le prototypage cette étape est souvent faite à la main, avec un fer à souder.
+    \item[Assemblage] Les composants électriques annexes (boutons, connecteurs, etc.) sont soudés sur le \gls{mid}.
+        Pendant le prototypage, cette étape est souvent faite à la main, avec un fer à souder.
         Pour la production, si le polymère a une température de fusion suffisament élevée, l'assemblage par \emph{reflow soldering} est possible.
         On peut se référer au séminaire \cite{smd-assembly-2013} pour plus de détails.
 
@@ -50,14 +50,14 @@ On retrouve donc, dans l'ordre :
         %\label{fig:lds-process}
     \end{center}
 \end{figure}
-L'étape de métallisation est celle qui va déposer les pistes sur le polymère à proprement parler.
+L'étape de métallisation est celle qui va à proprement parler déposer les pistes sur le polymère.
 Afin de garantir le bon fonctionnement de cette étape, un rinçage de la pièce entre chaque bain est effectué, ainsi qu'un séchage à chaud après le dernier bain, afin d'enlever toute trace sur la pièce finale.
 
 Le premier bain de cuivre se fait sans électrolyse, vu qu'aucune piste conductrice n'existe pour le moment.
-Dans ce bain, du cuivre va croître autour des atomes de métal présents à la surface du polymère et se liera au microcavités résultant de l'activation laser.
+Dans ce bain, du cuivre va croître autour des atomes de métal présents à la surface du polymère et se liera aux microcavités résultant de l'activation laser.
 L'épaisseur maximum atteignable lors de ce premier bain est de 5 à 8 \si{\micro\meter}.
 
-Dans les applications à fort courants, une grande épaisseur de cuivre est souhaitée.
+Dans les applications à fort courant, une grande épaisseur de cuivre est souhaitée.
 Pour y parvenir, on peut, après le premier bain, faire une déposition éléctrolytique du cuivre.
 Pour cela, il faut que toute les pistes soient connectées entre elles en un point.
 Si ce n'était pas le cas, il faudrait connecter les pistes une à une à l'éléctrode, ce qui serait long et donc coûteux.
@@ -70,7 +70,7 @@ Le rôle de cette dernière est d'empêcher l'oxydation de la couche de cuivre, 
 
 \subsection{Two-shot molding}
 Le two-shot molding est un procédé antérieur au \gls{lds} et qui est dans le domaine public.
-Il est essentiellement utilisé dans le milieu de l'injection plastique, pour produire des pièces injectées de différentes couleurs, comme des touches de clavier d'ordinateur.
+Il est essentiellement utilisé dans le domaine de l'injection plastique, pour produire des pièces injectées de différentes couleurs, comme des touches de clavier d'ordinateur.
 Cette méthode consiste à d'abord mouler les pistes dans un polymère dopé, puis à ``surmouler'' la forme définitive de la pièce autour (fig. \ref{fig:second-shot}).
 Finalement, la pièce est métalisée suivant le même procédé que dans le \gls{lds}, mais le cuivre ne se dépose que sur les parties exposées du polymère dopé (fig. \ref{fig:two-shot-metal}).
 
