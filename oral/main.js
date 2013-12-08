@@ -1,9 +1,18 @@
 function gotoSlide() {
-    currentSlide = Reveal.getIndices(Reveal.getCurrentSlide()).h;
+    currentSlide = Reveal.getIndices(Reveal.getCurrentSlide());
 
+    if(currentSlide.v == 0)
+        current = String(currentSlide.h);
+    else
+        current = currentSlide.h + "-" + currentSlide.v;
 
-    slide = parseInt(prompt("Goto slide ?", currentSlide));
-    Reveal.slide(slide, 0, 0);
+    slide = prompt("Goto slide ?", current);
+
+    slide_indices = slide.split("-");
+    if(slide_indices.length == 2)
+        Reveal.slide(parseInt(slide_indices[0]), parseInt(slide_indices[1]), 0);
+    else
+        Reveal.slide(parseInt(slide), 0, 0);
 }
 
 // Full list of configuration options available here:
