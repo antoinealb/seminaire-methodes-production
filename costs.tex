@@ -16,13 +16,13 @@
         \label{fig:example-part}
 \end{figure}
 Pour notre étude de coûts, nous avons décidé de nous baser sur la série en production chez Cicorel lors de notre visite.
-Les tableaux de calculs de coûts restent néanmoins valables, moyennant un changement de certaines valeurs.
+Les tableaux de calculs de coûts restent néanmoins généralisables, moyennant un changement de certaines valeurs.
 Les paramètres à changer en fonction de la pièce sont indiqués dans le détail de chaque partie.
 
 
 \paragraph{Descriptif de la pièce}
 La pièce que nous considérons est une pièce relativement simple.
-Il s'agit d'un couvercle anti-ingénierie inverse pour lecteur de carte de crédit.
+Il s'agit d'un couvercle contre l'ingénierie inverse pour lecteur de carte de crédit.
 Le rôle de cette pièce est de détecter toute tentative d'accéder à l'intérieur de l'appareil, soit en le démontant, soit en le perçant.
 Pour accomplir cette fonction, deux pistes sont placées en serpentin à l'intérieur du couvercle.
 L'appareil est programmé pour effacer toute les données sensibles dès qu'une de ces pistes est rompue.
@@ -36,8 +36,8 @@ L'étape d'injection plastique demande un moule usiné soit par éléctroérosio
 Le coût du moule a été estimé suivant les calculs présentés dans le séminaire\cite{electroerosion-2013}.
 Le détail de ces calculs sortant du cadre du présent séminaire, nous avons fait le choix de ne pas les inclure. 
 
-Nous avons également supposé que la pièce est faite dans la matière la moins cher, c'est à dire le polycarbonate.
-Les polymères activables sont environ 20\% plus cher que leur homologue non activable d'après notre contact chez Cicorel.
+Nous avons également supposé que la pièce est réalisée dans la matière la moins chère, c'est à dire le polycarbonate.
+Les polymères activables sont en moyenne 20\% plus cher que leur homologue non activable d'après notre contact chez Cicorel.
 Les prix des matériaux varient entre \SI{11}{\chf\per\kilogram} pour du \textsc{pc} et \SI{220}{\chf\per\kilogram} pour du \textsc{peek}.
 
 \subsection{Activation Laser}
@@ -48,7 +48,7 @@ Pour calculer le coût de l'étape d'activation sélective (\gls{lds}) nous avon
         Elle est amortie en 5 ans.
     \item Un opérateur ne peut s'occuper que d'une machine à la fois.
     \item La machine consomme en permanence sa puissance de pointe soit \SI{2.5}{\kilo\watt} \cite{lpkf-microline-series}.
-        L'électricité représentant une fraction faible du coût final, cette hypothèse n'induis pas de grande erreurs.
+        L'électricité représentant une fraction faible du coût final, cette hypothèse n'induit pas de grandes erreurs.
 \end{itemize}
 
 Le calcul de la surface occuppée par les pistes sur notre circuit se base sur une largeur de piste de \SI{150}{\micro\meter} et une
@@ -58,23 +58,25 @@ Pour une autre pièce, la surface des pistes peut souvent être obtenue dans le 
 \input{cost_lds.tex}
 
 \subsection{Métallisation}
-Calculer le coût réel de cette étape est difficile, car beaucoup d'informations ne sont pas disponibles publiquement : le prix des bains et de la \gls{step} pour ne citer que ces deux là, ne sont pas trouvable chez les fournisseurs.
+Calculer le coût réel de cette étape est difficile, car beaucoup d'informations ne sont pas accessibles publiquement : le prix des bains et de la \gls{step} pour ne citer que ces deux là, ne sont pas disponibles chez les fournisseurs.
 De plus, filtrer les bains pour les recycler permet de récupérer un peu de matière qui est revendue, ce qui intervient dans le calcul de coût, mais est difficile à estimer.
 Finalement, notre contact chez Cicorel a refusé de détailler leur méthode de calculs pour ces bains, en nous répondant qu'il s'agissait de données internes et confidentielles.
 
 Nous avons donc estimé que le coût pour déposer \SI{1}{\kilogram} de métal par voie chimique était environ cinq fois le prix de ce métal sur le marché.
 Ce coût inclut la \gls{step}, le chauffage des bains et l'électricité consommée par le robot servant à déplacer les pièces d'un bain au suivant. 
 Cette estimation peut sembler hasardeuse, mais elle donne néanmoins une approximation suffisante pour l'ingénieur désireux d'utiliser ce procédé.
-À ce coût des matériaux, il faut ajouter l'amortissement de la machine sur cinq ans et l'opérateur (deux opérateur pour trois lignes).
+À ce coût, il faut ajouter l'amortissement de la machine sur cinq ans et l'opérateur (deux opérateur pour trois lignes).
 
-Pour estimer le temps de cycle, nous avons le temps de l'étape la plus longue, c'est à dire la déposition du cuivre.
-En effet, une fois un rack sorti du bain de cuivre, un autre peut prendre sa place tandis qu'il continue dans la chaîne.
+Pour estimer le temps de cycle, nous avons retenu le temps de l'étape la plus longue, c'est à dire la déposition du cuivre.
+En effet, une fois un rack sorti du bain de cuivre, un autre peut prendre sa place tandis que le premier continue dans la chaîne.
 
 \input{cost_metalization.tex}
 
+\clearpage % TODO changer ca !
 \subsection{Récapitulatif}
 Le calcul des coût appliqué au couvercle d'exemple (fig. \ref{fig:example-part}) donne le résultat visible dans le tab. \ref{tab:cost-final}.
 \input{cost_final.tex}
+
 
 \begin{figure}[h!]
 
@@ -92,7 +94,7 @@ Les principales différences à prendre en compte sont :
 \begin{itemize}
     \item Le prix de la matière de la coque, \SI{3}{\chf\per\kilogram} pour du \gls{pc} standard, contre \SI{11}{\chf\per\kilogram} pour sa variante activable.
     \item Le coût de fabrication du \gls{pcb} équivalent.
-        Dans cet exemple nous considérons un \gls{pcb} qui ne couvre que le fond du boîtier, contrairement à une solution \gls{mid} qui couvre également les parois latérales.
+        Dans cet exemple, nous considérons un \gls{pcb} qui ne couvre que le fond du boîtier, contrairement à une solution \gls{mid} qui couvre également les parois latérales.
     \item On considère que le \gls{pcb} est fixé mécaniquement au boîtier et que cette étape est faite à la main.
     \item Un connecteur doit être soudé sur le \gls{pcb} tandis qu'en \gls{mid} le connecteur est intégré directement dans la pièce.
 \end{itemize}

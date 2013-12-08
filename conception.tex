@@ -1,23 +1,22 @@
 
 \section{Conception de MID}
 La conception des \gls{mid} commence par la création du schéma électrique dans un logiciel de conception électronique standard, puis le schéma est exporté sous forme de \emph{netlist}, c'est à dire d'une liste de connexion entre différents composants.
-Le design mécanique du \gls{mid} se fait dans un logiciel de \textsc{dao} standard, comme Solidworks puis est exporté au format \textsc{step}.
+Le design mécanique du \gls{mid} se fait dans un logiciel de \textsc{dao} standard, comme Solidworks, puis est exporté au format \textsc{step}.
 
 La \emph{netlist} et le fichier \textsc{step} sont ensuite importés dans un logiciel spécifique \footnote{Nextra de chez Mecadtron \url{http://www.mecadtron.com/produkte/nextra.en.php}} pour l'étape de routage (placement des pistes).
-Lors de cette étape on place aussi des repères appelés \emph{fiducials} qui seront utilisés par les machines d'activation et d'assemblage pour faire un alignement visuel.
-On peut également placer des codes-barres 2D (\emph{datamatrix}) qui seront modifiés par la machine d'activation pour y placer un numéro de série, afin de faire du suivi des pièces.
+Lors de cette étape, on place aussi des repères appelés \emph{fiducials} qui seront utilisés par les machines d'activation et d'assemblage pour faire un alignement visuel.
+On peut également placer des codes-barres 2D (\emph{datamatrix}) qui seront modifiés par la machine d'activation pour y placer un numéro de série, afin d'assurer le suivi des pièces.
 
 \subsection{Matériaux utilisables}
 Les contraintes inhérentes à la technologie \gls{lds} limitent fortement le choix des matériaux :
 \begin{itemize}
-    \item La pièce étant injectée puis activée, le matériaux choisi doit être un thermoplastique,
-    \item Pour l'étape d'activation, le polymère doit pouvoir se lier avec un dopant organométallique, généralement à base de palladium,
-    \item L'assemblage des composants par \textit{reflow soldering} exige une température de fusion élevée.
+    \item la pièce étant injectée puis activée, le matériaux choisi doit être un thermoplastique,
+    \item pour l'étape d'activation, le polymère doit pouvoir se lier avec un dopant organométallique, généralement à base de palladium,
+    \item l'assemblage des composants par \textit{reflow soldering} exige une température de fusion élevée.
 \end{itemize}
 
-LPKF a donc créé une liste de matériaux utilisables et recommandés pour le \gls{lds}.
-Cette liste est visible dans le tab. \ref{tab:mid-materials}.
-Une liste de fournisseur proposant ces matériaux déjà dopés est également disponible chez LPKF \cite{mid-design-rules}.
+LPKF a donc créé une liste de matériaux utilisables et recommandés pour le \gls{lds} (voir tab. \ref{tab:mid-materials}).
+Une liste de fournisseurs proposant ces matériaux déjà dopés est également disponible chez LPKF \cite{mid-design-rules}.
 
 % Table des matériaux
 \begin{table}[h]
@@ -42,29 +41,29 @@ PC/ABS & Mélange de PC et d'ABS \\
 
 \subsection{Limites du procédé LDS}
 La conception de circuits \gls{mid} est délicate car elle doit prendre en compte des limites provenant de l'injection plastique, de l'activation laser et de la métallisation.
-L'ingénieur doit donc porter un soin tout particulier à la conception, car des petits détails, comme des trous borgnes, peuvent augmenter significativement le coût de la pièce, voir même la rendre impossible à réaliser.
+L'ingénieur doit donc porter un soin tout particulier à la conception, car de petits détails, comme des trous borgnes, peuvent augmenter significativement le coût de la pièce, voir même la rendre impossible à réaliser.
 L'ensemble des règles de conception à respecter est compilée dans un seul document, fourni par LPKF \cite{mid-design-rules}.
 Nous allons ici nous concentrer sur les plus importantes.
 
 La plus grosse limitation des \glspl{mid} par rapport aux \glspl{pcb} est la faible densité de pistes atteignable.
 En effet, il est impossible de fabriquer des \glspl{mid} avec des couches internes, là où des circuits à 16 couches sont facilement atteignables dans le domaine des \glspl{pcb}.
-De plus, les \glspl{mid} ne permettent pas de faire des pistes très fines ou très serrées : On considére généralement qu'il faut rester au dessus de \SI{150}{\micro\meter} pour la largeur de piste et \SI{200}{\micro\meter} pour l'écart inter-piste.
+De plus, les \glspl{mid} ne permettent pas de faire des pistes très fines ou très serrées : on considére généralement qu'il faut rester au-dessus de \SI{150}{\micro\meter} pour la largeur de piste et \SI{200}{\micro\meter} pour l'écart inter-piste.
 
-De plus l'angle d'incidence du laser doit rester inférieur à \SI{30}{\degree} par rapport à la normale de la surface.
-Un angle plus important change la forme du spot du laser, qui passe d'un cercle à une ellipse, ce qui dissipe plus la puissance du laser et diminue la résolution.
+De plus, l'angle d'incidence du laser doit rester inférieur à \SI{30}{\degree} par rapport à la normale de la surface.
+Un angle plus important change la forme du spot du laser, qui passe d'un cercle à une ellipse, ce qui dissipe trop la puissance du laser et diminue la résolution.
 On peut néanmoins corriger ce problème en montant la pièce sur un support orientable, moyennant une perte de temps pour la rotation de la pièce et le réalignement optique de la machine.
 Dans les cas les plus extrêmes, on ne peut pas corriger ce problème de cette façon, et alors le passage au two-shot est inévitable.
 On préfère cependant souvent modifier la pièce pour rester sur une technologie \gls{lds} pour minimiser les coûts et faciliter le développement.
 
 %TODO Insérer figure montrant une orientation problèmatique
 
-La dernière limitation concerne le volume de travail de la machine d'activation laser : environ $\SI{200}{\milli\meter}\times\SI{200}{\milli\meter}\times\SI{25}{\milli\meter}$, légérement variable d'une machine à l'autre.
+La dernière limitation concerne le volume de travail de la machine d'activation laser : environ $\SI{200}{\milli\meter}\times\SI{200}{\milli\meter}\times\SI{25}{\milli\meter}$, légèrement variable d'une machine à l'autre.
 
 \subsection{Prototypage}
 Le travail d'ingénieur étant un procédé itératif, il est important de pouvoir réaliser rapidement et à faible coût des prototypes fonctionnels d'une pièce ou d'un système.
 Le \gls{mid}, et plus particuliérement l'étape d'injection plastique, n'est pas bien adapté au prototypage : lancer une série coûte cher et n'est pas un procédé rapide (jusqu'à six semaines).
 
-Le \gls{lds} offre différentes possibilités de prototypage simples, puisque la seule étape différente de la production est la création de la pièce de base en polymère.
+Le \gls{lds} offre cependant différentes possibilités de prototypage simples, puisque la seule étape différente de la production est la création de la pièce de base en polymère.
 Les étapes d'activation et de métallisation sont donc inchangées par rapport à la production.
 Le prototypage sert autant à mettre au point le \gls{mid} que le procédé de production, par exemple les supports pour la métallisation ou l'activation.
 
@@ -75,10 +74,10 @@ Son principal inconvénient est que certaines pièces qui peuvent être injecté
 
 Une seconde méthode de prototypage consiste à réaliser en stéréolithographie ou en impression 3D la forme de la pièce puis à la peindre avec une laque spéciale vendue par LPKF, qui rend la surface activable après un bref passage au four, ce qui demande un polymère stable à \SI{90}{\celsius}.
 On utilisera donc de préférence de l'\textsc{abs}.
-Cette méthode, comme la précédente, permet un temps entre l'envoi d'une commande et la réception d'un prototype de l'ordre d'une semaine.
+Cette méthode, comme la précédente, permet de réduire à environ une semaine le temps entre l'envoi d'une commande et la réception d'un prototype.
 
 Toujours en utilisant la stéréolithographie ou l'impression 3D, il est possible de réaliser la forme de la pièce en positif, puis de couler un moule en silicone autour, pour l'utilisation dans une machine d'injection sous vide.
-On injecte ensuite la pièce en \textsc{pur} dopé, qu'on peut ensuite activer et métalliser de façon standard.
+On injecte ensuite la pièce en \textsc{pur} dopé, qu'on peut activer et métalliser de façon standard.
 Cette méthode a comme principal inconvénient de demander une machine spécifique pour l'injection sous vide, et ne de pas proposer de grands avantages par rapport aux deux méthodes précédentes.
 Elle n'est donc que rarement utilisée.
 
