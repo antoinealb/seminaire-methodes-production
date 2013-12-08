@@ -49,13 +49,20 @@ La plus grosse limitation des \glspl{mid} par rapport aux \glspl{pcb} est la fai
 En effet, il est impossible de fabriquer des \glspl{mid} avec des couches internes, là où des circuits à 16 couches sont facilement atteignables dans le domaine des \glspl{pcb}.
 De plus, les \glspl{mid} ne permettent pas de faire des pistes très fines ou très serrées : on considére généralement qu'il faut rester au-dessus de \SI{150}{\micro\meter} pour la largeur de piste et \SI{200}{\micro\meter} pour l'écart inter-piste.
 
-De plus, l'angle d'incidence du laser doit rester inférieur à \SI{30}{\degree} par rapport à la normale de la surface.
+De plus, l'angle d'incidence du laser (correspond à l'angle $\beta$ sur la fig. \ref{fig:angle-limit}) doit rester inférieur à \SI{30}{\degree} par rapport à la normale de la surface.
 Un angle plus important change la forme du spot du laser, qui passe d'un cercle à une ellipse, ce qui dissipe trop la puissance du laser et diminue la résolution.
 On peut néanmoins corriger ce problème en montant la pièce sur un support orientable, moyennant une perte de temps pour la rotation de la pièce et le réalignement optique de la machine.
+Un autre moyen de corriger ce problème est d'utiliser une machine avec plusieurs lasers orienté indépendamment.
 Dans les cas les plus extrêmes, on ne peut pas corriger ce problème de cette façon, et alors le passage au two-shot est inévitable.
 On préfère cependant souvent modifier la pièce pour rester sur une technologie \gls{lds} pour minimiser les coûts et faciliter le développement.
 
-%TODO Insérer figure montrant une orientation problèmatique
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{images/activation_limit}
+        \caption{Angle limite pour l'activation ($\beta < \SI{30}{\degree}$).}
+        \label{fig:angle-limit}
+    \end{center}
+\end{figure}
 
 La dernière limitation concerne le volume de travail de la machine d'activation laser : environ $\SI{200}{\milli\meter}\times\SI{200}{\milli\meter}\times\SI{25}{\milli\meter}$, légèrement variable d'une machine à l'autre.
 
