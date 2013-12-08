@@ -75,16 +75,26 @@ En effet, une fois un rack sorti du bain de cuivre, un autre peut prendre sa pla
 \clearpage % TODO changer ca !
 \subsection{Récapitulatif}
 Le calcul des coût appliqué au couvercle d'exemple (fig. \ref{fig:example-part}) donne le résultat visible dans le tab. \ref{tab:cost-final}.
+Les fig. \ref{fig:cost-repartition} et \ref{fig:cost-repartition-b} montrent la répartition des coûts en fonction de l'étape de fabrication et de leur source.
 \input{cost_final.tex}
 
 
-\begin{figure}[h!]
-
+\begin{figure}[p!]
     \begin{tikzpicture}
         \pie[sum=auto,text=pin, explode=0.1, after number=\si{\chf}, color=lightgray]{0.38/Injection, 0.55/LDS, 0.90/Métallisation}
     \end{tikzpicture}
     \begin{center}
         \caption{Répartition des coûts selon les étapes pour la pièce d'exemple.}\label{fig:cost-repartition}
+    \end{center}
+\end{figure}
+
+\begin{figure}[p!]
+    \begin{tikzpicture}
+        \pie[sum=auto,text=pin, explode=0.1, color=lightgray]{72/Opérateur, 24/Amortissement, 54/Bains, 4/Moule,27.5/Matière}
+    \end{tikzpicture}
+    \begin{center}
+        \caption{Source des différents coûts (en centimes). L'électricité n'est pas affichée, car négligeable.}
+        \label{fig:cost-repartition-b}
     \end{center}
 \end{figure}
 
