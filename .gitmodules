@@ -1,3 +1,6 @@
 [submodule "oral/reveal"]
 	path = oral/reveal
 	url = https://github.com/antoinealb/reveal.js.git
+[submodule "oral/holder"]
+	path = oral/holder
+	url = https://github.com/imsky/holder.git
