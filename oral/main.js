@@ -30,6 +30,7 @@ Reveal.initialize({
 
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
     transition: Reveal.getQueryHash().transition || 'linear',
+    transitionSpeed: 'fast',
 
     // Optional libraries used to extend on reveal.js
     dependencies: [
