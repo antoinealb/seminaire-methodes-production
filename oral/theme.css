@@ -141,6 +141,13 @@ b {
     text-align:justify;
 }
 
-.no-bullet {
-    list-style-type:none;
+.table {
+    text-color:#ffffff
+    border-width:1px;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #ecf0f1; 
 }
