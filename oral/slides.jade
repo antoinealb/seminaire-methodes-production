@@ -106,6 +106,10 @@ html(lang="fr")
                                     i.fa.fa-square-o
                                     |  Métallisation
 
+                    section.justify
+                        h1 Métallisation
+                        video(src="videos/Metallisation.mp4", data-autoplay, loop)
+
                     section.justify.grid
                         .col-8-12
                             h1 Laser<br>Direct<br>Structuring
@@ -121,14 +125,78 @@ html(lang="fr")
                                     i.fa.fa-check-square-o
                                     |  Métallisation
                        
-                    section 
-                        h1 Two-shot MID
+                    section.justify
+                        h1 Two-shot<br>MID
 
-                section(data-background="#8e44ad")
+                section(data-background="#8e44ad").justify
                     section
                         h1 Conception
-                        img(src="holder.js/500x500/text:MID bible")
+                    section(data-transition="none")
+                        .col-7-12
+                            img(src="images/design-rules.png", height="500px")
+                        .col-5-12.fragment.current-visible
+                            h2 Règles <br>de conception
+                            ul(style="list-style-type:none;")
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Polymère dopable
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Taille des pistes
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Angle d'incidence
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Volume maximal
 
+                    section(data-transition="none")
+                        .col-7-12
+                            img(src="images/design-rules.png", height="500px")
+                        .col-5-12
+                            h2 Polymères<br>activables
+                            ul(style="list-style-type:none;")
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Liquid Crystal Polymer
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Polyamide (PA)
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  PBT
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Mélange de PBT et PET
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  PPA
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Polycarbonate
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Mélange de Polycarbonate et d'ABS
+
+                    section(data-transition="none")
+                        .col-7-12
+                            img(src="images/design-rules.png", height="500px")
+                        .col-5-12
+                            h2 Taille<br>des pistes
+                            ul(style="list-style-type:none;list-style-position:inside;")
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Largeur de 150 microns
+                                li 
+                                    i.fa.fa-check-square-o
+                                    |  Clearance de 150 microns
+
+                    section(data-transition="none")
+                        .col-7-12
+                            img(src="holder.js/300x500", height="500px")
+                        .col-5-12
+                            h2 Angle<br>d'incidence
+                               
                 section
                     section
                         h1 
