@@ -532,7 +532,6 @@ html(lang="fr")
                             .col-6-12
                                 h2 PCB
                                 ul(style="list-style-type:none;")
-
                                     li
                                         i.fa.fa-chevron-right
                                         |  Forte densité de piste
@@ -544,10 +543,47 @@ html(lang="fr")
                                         |  Assemblage des SMD facilité
 
                     section.justify
-                        h1 Coûts des PCB
+                        h1 Alternative PCB
+                        ul(style="list-style-type:none;").fragment
+                            li
+                                i.fa.fa-chevron-right
+                                |  Même fonction que précedemment
 
+                            li
+                                i.fa.fa-chevron-right
+                                |  Solution composée de plusieurs composants :
+                                ol
+                                    li PCB de 60x60mm
+                                    li Connecteur soudé sur le PCB (réalisé automatiquement)
+                                    li Boîtier injecté     
+                            li
+                                i.fa.fa-chevron-right
+                                |  Assemblé par un opérateur
 
-                section
+                    section.justify
+                        h2 Coûts de l'alternative
+                        table.table
+                            tr
+                                td Circuit
+                                td 3.13
+                            tr
+                                td Connecteur + Assemblage SMD
+                                td 0.5
+                            tr
+                                td Boîtier
+                                td 0.2
+                            tr
+                                td Assemblage
+                                td 0.15
+
+                            tr
+                                td <b>Total</b>
+                                td <b>3.98</b>
+
+                    section
+                        h1 2x plus cher !
+
+                section.justify
                     h1 #questions
 
         script(src="reveal/lib/js/head.min.js")
