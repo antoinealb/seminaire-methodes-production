@@ -50,7 +50,7 @@ html(lang="fr")
  
                     section(data-background="images/lds-micro-train.jpg")
 
-                section(data-background="#e67e22").justify
+                section(data-background="#d35400").justify
                     section
                         h1 
                             i.fa.fa-wrench
@@ -71,6 +71,21 @@ html(lang="fr")
                                     i.fa.fa-square-o
                                     |  Métallisation
 
+                    section
+                        h1 Injection
+                        ul(style="list-style-type:none;")
+                            li 
+                                i.fa.fa-chevron-right
+                                |  Injection plastique standard
+
+                            li 
+                                i.fa.fa-chevron-right
+                                |  Thermoplastiques uniquement
+
+                            li
+                                i.fa.fa-chevron-right
+                                |  Polymère dopé
+
                     section.grid
                         .col-8-12
                             h1 Laser<br>Direct<br>Structuring
@@ -86,6 +101,20 @@ html(lang="fr")
                                     i.fa.fa-square-o
                                     |  Métallisation
 
+
+                    section
+                        h1 Activation
+                        ul(style="list-style-type:none;")
+                            li 
+                                i.fa.fa-chevron-right
+                                |  Laser IR orienté optiquement. se déplaçant à 4 mètres par seconde.
+                            li 
+                                i.fa.fa-chevron-right
+                                |  Brûle la partie organique du polymère
+
+                            li 
+                                i.fa.fa-chevron-right
+                                |  Laisse le dopant métallique et des microcavités
 
                     section
                         h1 Activation
@@ -107,9 +136,31 @@ html(lang="fr")
                                     i.fa.fa-square-o
                                     |  Métallisation
 
+                    
+
                     section
                         h1 Métallisation
+                        .grid
+                            .col-6-12
+                                img(src="images/CuNiAu_color.png", height="500px")
+                            .col-6-12
+                            ul(style="list-style-type:none;")
+                                li 
+                                    i.fa.fa-chevron-right
+                                    |  Trois bains chimiques
+
+                                li 
+                                    i.fa.fa-chevron-right
+                                    |  Protection contre l'oxydation
+                                li 
+                                    i.fa.fa-chevron-right
+                                    |  Déposition électrique possible
+
+
+                    section
                         video(src="videos/Metallisation.mp4", data-autoplay, loop)
+
+                    section(data-background="images/LDS_steps.png")
 
                     section.grid
                         .col-8-12
@@ -228,6 +279,23 @@ html(lang="fr")
                                 li.fragment 
                                     i.fa.fa-arrow-right
                                     |  Possibilité de faire tourner la pièce
+
+                    section
+                        .col-7-12
+                            img(src="images/LPKF_Protopaint.png")
+                        .col-5-12
+                            h2 Prototypage
+                            ul(style="list-style-type:none;").fragment
+                                li 
+                                    i.fa.fa-chevron-right
+                                    |  Impression 3D
+                                li 
+                                    i.fa.fa-chevron-right
+                                    |  LPKF ProtoPaint
+
+                                li 
+                                    i.fa.fa-chevron-right
+                                    |  Soft Mold
                             
                 section(data-background="#2ecc71").justify
                     section
@@ -239,7 +307,7 @@ html(lang="fr")
                     section
                         h2 Pièce étudiée
                         .grid
-                            .col-8-12
+                            .col-6-12
                                 ul(style="list-style-type:none;")
                                     li 
                                         i.fa.fa-chevron-right
@@ -251,8 +319,10 @@ html(lang="fr")
                                     li 
                                         i.fa.fa-chevron-right
                                         |  Forte intégration électronique / mécanique
-                            .col-4-12.fragment
-                                img(src="holder.js/300x300/text:Pièce d'exemple")
+                            .col-6-12.fragment
+                                img(src="images/Example_part.png")
+
+                    section(data-background="images/Cap.png")
 
                     section.grid
 
@@ -360,20 +430,76 @@ html(lang="fr")
                             .col-6-12
                                 table.table
                                     tr
-                                        td Injection
+                                        td 
+                                            i.fa.fa-square(style="color:#3498db") 
+                                            |  Injection
                                         td 0.38
                                     tr
-                                        td Activation
+                                        td 
+                                            i.fa.fa-square(style="color:#e74c3c") 
+                                            |  Activation
                                         td 0.55
+
                                     tr
-                                        td Métallisation
+                                        td 
+                                            i.fa.fa-square(style="color:#f1c40f") 
+                                            |  Métallisation
                                         td 0.90
                                     tr
                                         td
                                             b Total
-                                        td 1.83
-                            .col-6-12.fragment
-                                img(src="holder.js/250x250/text:Répartition des coûts")
+                                        td 
+                                            b 1.83
+                            .col-6-12
+                                canvas(width="400", height="400")#cost_repartition
+
+
+                    section
+                        h2 Récapitulatif
+                        .grid
+                            .col-6-12
+                                table.table
+                                    tr
+                                        td 
+                                            i.fa.fa-square(style="color:#3498db") 
+                                            |  Opérateur
+                                        td 0.72
+
+
+                                    tr
+                                        td 
+                                            i.fa.fa-square(style="color:#e67e22") 
+                                            |  Matière
+                                        td 0.28
+
+
+                                    tr
+                                        td 
+                                            i.fa.fa-square(style="color:#f1c40f") 
+                                            |  Moule
+                                        td 0.04
+
+
+                                    tr
+                                        td 
+                                            i.fa.fa-square(style="color:#e74c3c") 
+                                            |  Bains
+                                        td 0.55
+
+                                    tr
+                                        td 
+                                            i.fa.fa-square(style="color:#1abc9c") 
+                                            |  Amortissement
+                                        td 0.24
+
+                                    tr
+                                        td
+                                            b Total
+                                        td 
+                                            b 1.83
+
+                            .col-6-12
+                                canvas(width="400", height="400")#cost_source
 
 
 
@@ -386,11 +512,14 @@ html(lang="fr")
                             | &nbsp; &nbsp;&nbsp;Et les PCB?
 
                     section(data-background="images/MIDvsPCB.png")
+                    section
+                        h1 Coûts des PCB
 
                 section
                     h1 #questions
 
         script(src="reveal/lib/js/head.min.js")
+        script(src="Chart.min.js")
         script(src="reveal/js/reveal.min.js")
         script(src="main.js")
         script(src="holder/holder.js")

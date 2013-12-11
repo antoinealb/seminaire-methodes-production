@@ -69,3 +69,37 @@ function currentPageFormatter(event) {
         $(".slide-number").text(currentPageFormatter(event));
     } );
 
+
+var data = [
+	{
+		value: 0.38,
+		color:"#3498db"
+	},
+	{
+		value : 0.55,
+		color : "#e74c3c"
+	},
+	{
+		value : 0.90,
+		color : "#f1c40f"
+	}			
+]
+
+
+var data2 = [
+	{value: 0.72, color:"#3498db"},
+	{value: 0.275, color:"#e67e22"},
+	{value: 0.04, color:"#f1c40f"},
+	{value: 0.54, color:"#e74c3c"},
+	{value: 0.24, color:"#1abc9c"},
+]
+
+Reveal.addEventListener( 'slidechanged', function( event ) {
+    //Get the context of the canvas element we want to select
+    var ctx = document.getElementById("cost_repartition").getContext("2d");
+    var myNewChart = new Chart(ctx).Pie(data);
+
+    //Get the context of the canvas element we want to select
+    var ctx = document.getElementById("cost_source").getContext("2d");
+    var myNewChart = new Chart(ctx).Pie(data2);
+} );

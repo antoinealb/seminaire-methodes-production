@@ -41,7 +41,7 @@
           <section data-background="images/fischer_blur.png"></section>
           <section data-background="images/lds-micro-train.jpg"></section>
         </section>
-        <section data-background="#e67e22" class="justify">
+        <section data-background="#d35400" class="justify">
           <section>
             <h1> <i class="fa fa-wrench"></i> Fabrication</h1>
           </section>
@@ -57,6 +57,14 @@
               </ul>
             </div>
           </section>
+          <section>
+            <h1>Injection</h1>
+            <ul style="list-style-type:none;">
+              <li> <i class="fa fa-chevron-right"></i> Injection plastique standard</li>
+              <li> <i class="fa fa-chevron-right"></i> Thermoplastiques uniquement</li>
+              <li><i class="fa fa-chevron-right"></i> Polymère dopé</li>
+            </ul>
+          </section>
           <section class="grid">
             <div class="col-8-12">
               <h1>Laser<br>Direct<br>Structuring</h1>
@@ -68,6 +76,14 @@
                 <li> <i class="fa fa-square-o"></i> Métallisation</li>
               </ul>
             </div>
+          </section>
+          <section>
+            <h1>Activation</h1>
+            <ul style="list-style-type:none;">
+              <li> <i class="fa fa-chevron-right"></i> Laser IR orienté optiquement. se déplaçant à 4 mètres par seconde.</li>
+              <li> <i class="fa fa-chevron-right"></i> Brûle la partie organique du polymère</li>
+              <li> <i class="fa fa-chevron-right"></i> Laisse le dopant métallique et des microcavités</li>
+            </ul>
           </section>
           <section>
             <h1>Activation</h1>
@@ -87,8 +103,20 @@
           </section>
           <section>
             <h1>Métallisation</h1>
+            <div class="grid">
+              <div class="col-6-12"><img src="images/CuNiAu_color.png" height="500px"/></div>
+              <div class="col-6-12"></div>
+              <ul style="list-style-type:none;">
+                <li> <i class="fa fa-chevron-right"></i> Trois bains chimiques</li>
+                <li> <i class="fa fa-chevron-right"></i> Protection contre l'oxydation</li>
+                <li> <i class="fa fa-chevron-right"></i> Déposition électrique possible</li>
+              </ul>
+            </div>
+          </section>
+          <section>
             <video src="videos/Metallisation.mp4" data-autoplay="data-autoplay" loop="loop"></video>
           </section>
+          <section data-background="images/LDS_steps.png"></section>
           <section class="grid">
             <div class="col-8-12">
               <h1>Laser<br>Direct<br>Structuring</h1>
@@ -171,6 +199,17 @@
               </ul>
             </div>
           </section>
+          <section>
+            <div class="col-7-12"><img src="images/LPKF_Protopaint.png"/></div>
+            <div class="col-5-12">
+              <h2>Prototypage</h2>
+              <ul style="list-style-type:none;" class="fragment">
+                <li> <i class="fa fa-chevron-right"></i> Impression 3D</li>
+                <li> <i class="fa fa-chevron-right"></i> LPKF ProtoPaint</li>
+                <li> <i class="fa fa-chevron-right"></i> Soft Mold</li>
+              </ul>
+            </div>
+          </section>
         </section>
         <section data-background="#2ecc71" class="justify">
           <section>
@@ -179,16 +218,17 @@
           <section>
             <h2>Pièce étudiée</h2>
             <div class="grid">
-              <div class="col-8-12">
+              <div class="col-6-12">
                 <ul style="list-style-type:none;">
                   <li> <i class="fa fa-chevron-right"></i> Couvercle de sécurité</li>
                   <li> <i class="fa fa-chevron-right"></i> Protège de l'intrusion</li>
                   <li> <i class="fa fa-chevron-right"></i> Forte intégration électronique / mécanique</li>
                 </ul>
               </div>
-              <div class="col-4-12 fragment"><img src="holder.js/300x300/text:Pièce d'exemple"/></div>
+              <div class="col-6-12 fragment"><img src="images/Example_part.png"/></div>
             </div>
           </section>
+          <section data-background="images/Cap.png"></section>
           <section class="grid">
             <h2>Injection</h2>
             <div class="col-8-12">
@@ -284,24 +324,62 @@
               <div class="col-6-12">
                 <table class="table">
                   <tr>
-                    <td>Injection</td>
+                    <td> <i style="color:#3498db" class="fa fa-square"> </i> Injection</td>
                     <td>0.38</td>
                   </tr>
                   <tr>
-                    <td>Activation</td>
+                    <td> <i style="color:#e74c3c" class="fa fa-square"> </i> Activation</td>
                     <td>0.55</td>
                   </tr>
                   <tr>
-                    <td>Métallisation</td>
+                    <td> <i style="color:#f1c40f" class="fa fa-square"> </i> Métallisation</td>
                     <td>0.90</td>
                   </tr>
                   <tr>
                     <td><b>Total</b></td>
-                    <td>1.83</td>
+                    <td> <b>1.83</b></td>
                   </tr>
                 </table>
               </div>
-              <div class="col-6-12 fragment"><img src="holder.js/250x250/text:Répartition des coûts"/></div>
+              <div class="col-6-12">
+                <canvas width="400" height="400" id="cost_repartition"></canvas>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Récapitulatif</h2>
+            <div class="grid">
+              <div class="col-6-12">
+                <table class="table">
+                  <tr>
+                    <td> <i style="color:#3498db" class="fa fa-square"> </i> Opérateur</td>
+                    <td>0.72</td>
+                  </tr>
+                  <tr>
+                    <td> <i style="color:#e67e22" class="fa fa-square"> </i> Matière</td>
+                    <td>0.28</td>
+                  </tr>
+                  <tr>
+                    <td> <i style="color:#f1c40f" class="fa fa-square"> </i> Moule</td>
+                    <td>0.04</td>
+                  </tr>
+                  <tr>
+                    <td> <i style="color:#e74c3c" class="fa fa-square"> </i> Bains</td>
+                    <td>0.55</td>
+                  </tr>
+                  <tr>
+                    <td> <i style="color:#1abc9c" class="fa fa-square"> </i> Amortissement</td>
+                    <td>0.24</td>
+                  </tr>
+                  <tr>
+                    <td><b>Total</b></td>
+                    <td> <b>1.83</b></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-6-12">
+                <canvas width="400" height="400" id="cost_source"></canvas>
+              </div>
             </div>
           </section>
         </section>
@@ -310,6 +388,9 @@
             <h1> <i class="fa fa-warning"> </i>&nbsp; &nbsp;&nbsp;Et les PCB?</h1>
           </section>
           <section data-background="images/MIDvsPCB.png"></section>
+          <section>
+            <h1>Coûts des PCB</h1>
+          </section>
         </section>
         <section>
           <h1>#questions</h1>
@@ -317,6 +398,7 @@
       </div>
     </div>
     <script src="reveal/lib/js/head.min.js"></script>
+    <script src="Chart.min.js"></script>
     <script src="reveal/js/reveal.min.js"></script>
     <script src="main.js"></script>
     <script src="holder/holder.js"></script>
