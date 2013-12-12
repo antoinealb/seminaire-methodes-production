@@ -1,3 +1,12 @@
+#A faire avant la présentation
+* git pull
+* compiler les slides
+* connecter internet
+* Charger batterie
+* Mettre sleep sur "never"
+* Checker le wallpaper
+* Couper le son
+* Sortir les échantillons.
 # Slide de titre
 Bonjour okay ?
 
