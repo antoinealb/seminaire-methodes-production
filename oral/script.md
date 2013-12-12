@@ -11,15 +11,15 @@
 * Checker telecommandes.
 * Sortir les échantillons.
 
-#Slide de titre
+#Slide de titre [Antoine]
 Bonjour okay ?
-#Intro
+#Intro [Antoine]
 ## Qu'est-ce qu'un MID ?
 * Circuit électronique
 * Substrat plastique
 * 3D
 
-#Applications
+#Applications [Antoine]
 * Forte intégration
 
 ##Automobile
@@ -37,7 +37,7 @@ Bonjour okay ?
 * Fischer minimax : pièce d exemple qui est presentee. Tres forte densite de pins (30 pins sur 10mm de diametre). Environnement hostile (etanche a l'eau de mer, au sable, etc...)
 * Train miniature : Seul le contact de droite est en MID, l autre en tole de Cu pliée
 
-#Fabrication des MID
+#Fabrication des MID[Quentin]
 * Deux processus : LDS et 2-shot
 * Le LDS est plus récent et de loin le plus utilisé.
 ##Laser Direct Structuring
@@ -69,25 +69,25 @@ Bonjour okay ?
 * Changement de bain automatique.
 * Les bulles sont des bulls d'hydrogène (produit de réaction). On doit faire attention a ne pas les pieger dans la piece ce qui arreterait la reaction.
 
-##Two-shot
+##Two-shot[Antoine]
 * Procédé plus ancien
 * Plus cher (demande deux moules).
 * Permet de faire des pièces impossible au LDS.
 
-#Conception
+#Conception[Antoine]
 * Toutes les règles a respecter sont dans ce document fait par LPKF.
 * Polymères activables (voir liste). Fournisseurs dans document.
 * Taille des pistes. Clearance = distance entre les pistes.
 * angle d'incidence : Laser doit pouvoir acceder a la piste en respectant un angle pour eviter une perte d'intensite et de resolution. -> On fait tourner la pièce ou plusieurs lasers.
 
-## Prototypage
+## Prototypage[Quentin]
 * Injection peu facile a prototyper -> Impression 3D + ProtoPaint.
 * Possible de faire un soft mold pour tester l'injection (moins cher).
 * Possibilité d'usiner un bloc de matière activable. 
 * Avant l'impression 3D, moulage sous vide (20 piece).
 * Délais : 6 semaines pour lancer une série, 1 semaine pour un proto 3D. 4 semaines pour un soft mold.
 
-#Coûts
+#Coûts[Antoine]
 ##Pièce étudiée
 * Protection contre l'intrusion.
 * Voir mécanique
@@ -116,7 +116,7 @@ Bonjour okay ?
 * Diminution des coûts possible avec des machines d'activation automatique.
 * Electricité négligeable, donc pas sur le graphique.
 
-# Et les PCB ?
+# Et les PCB ?[Quentin]
 * On se demande pourquoi pas tout en MID ?
 * Les MID ne remplacent pas les PCB.o
 ## MID vs PCB
