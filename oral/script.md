@@ -6,25 +6,28 @@
 * Mettre sleep sur "never"
 * Checker le wallpaper
 * Couper le son
+* Naviguer jusqu a la slide mid vs pcb pour la charger.
+* Brancher les telecommandes.
+* Checker telecommandes.
 * Sortir les échantillons.
-# Slide de titre
-Bonjour okay ?
 
+#Slide de titre
+Bonjour okay ?
 #Intro
 ## Qu'est-ce qu'un MID ?
 * Circuit électronique
 * Substrat plastique
 * 3D
 
-# Applications
+#Applications
 * Forte intégration
 
-## Automobile
+##Automobile
 * Volant
 * Guidon
 * Diminue le cablâge
 
-## Telecom
+##Telecom
 * Permet de maitriser le pattern de radiation.
 * Permet d intégrer au chassis
 * Premier exemple : Antenne 2.4Ghz soudable
