@@ -1,4 +1,10 @@
-# Slides pour l'oral
+Voir les slides
+===============
+Ouvrir le fichier slides.html avec un navigateur récent (Chromium, Firefox, Pas Internet Explorer...).
+Certains éléments peuvent ne pas s'afficher correctement si le PC n'est pas connecté à internet (il manque certains CSS).
+
+Compiler les slides
+==================
 Les slides utilisent reveal.js comme logiciel de présentation et sont écrites en jade.
 
 Pour les compiler :
